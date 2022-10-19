@@ -5,8 +5,8 @@
 2. ```shell
      #!/usr/bin/env bash
      marco () {
-    	path = $(pwd)
-    	export path
+        	path = $(pwd)
+        	export path
      }
     ```
 
@@ -19,36 +19,36 @@
 
 3. ```shell
      #!/usr/bin/env bash
-    
+        
      code=0
      count=0
      path="/home/fel/exercise2"
-    
+        
      if [[ -f "$path/stdout.txt"]]
      then
-    	 rm -f "$path/stdout.txt"
+        	 rm -f "$path/stdout.txt"
      fi
      touch "$path/stdout.txt"
-    
+        
      if [[ of "path/stderr.txt"]]
      then
       	 rm -f "$path/stderr.txt"
      fi
      touch "$path/stderr.txt"
-    
+        
      while [ $code -eq 0 ]; do
-    	$path/problem3.sh >> $path/stdout.txt 2>> $path/stderr.txt
-    	code=$?
-    	((count++))
-    	
-    	if [[ $code -ne 0 ]]; then
-    		echo "runs $count times"
-    		cat $path/stdout.txt
-    		cat $path/stderr.txt
-    		exit 0
-    	fi
+        	$path/problem3.sh >> $path/stdout.txt 2>> $path/stderr.txt
+        	code=$?
+        	((count++))
+        	
+        	if [[ $code -ne 0 ]]; then
+        		echo "runs $count times"
+        		cat $path/stdout.txt
+        		cat $path/stderr.txt
+        		exit 0
+        	fi
      done    
-    	
+        	
     ```
 
     ```shell
@@ -65,4 +65,8 @@
      echo "Everything went according to plan"
     ```
 
-    
+4. ```shell
+     find ./ -name '*.html' | xargs -d '\n' tar cf 
+     ```
+
+     
